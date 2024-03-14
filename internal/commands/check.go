@@ -46,7 +46,7 @@ func newCheckCommand() *cobra.Command {
 }
 
 func runCheckCommand(input string) error {
-	ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Minute)
 	defer cancel()
 
 	client, err := docker.New(log.Infof)
